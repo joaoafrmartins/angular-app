@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source ./scripts/vars
+
+cp -R "$BOOTSTRAP/fonts/" "$PUBLIC_HTML"
+cp -R "$FONTAWESOME/fonts/" "$PUBLIC_HTML/css/"
+cp -R "$FLAGS/dist/img/" "$PUBLIC_HTML"
+cp "$PWD/index.html" "$PUBLIC_HTML/"

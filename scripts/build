@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ./scripts/vars
+
+browserify "." -d -o "$PUBLIC_HTML/bundle.js" --extension=".coffee"

@@ -1,0 +1,73 @@
+{
+  "name": "angular-app",
+  "version": "0.0.0",
+  "description": "Angular App",
+  "keywords": [
+    "Angular",
+    "App"
+  ],
+  "dependencies": {
+    "jquery": "",
+    "angular": "",
+    "angular-animate": "",
+    "angular-cookies": "",
+    "angular-resource": "",
+    "angular-route": "",
+    "angular-sanitize": "",
+    "angular-touch": "",
+    "angular-ui-bootstrap": "",
+    "angular-ui-router": "",
+    "angular-ui-router-tabs": "",
+    "angular-translate": "",
+    "angular-translate-loader-partial": "",
+    "bootstrap": "",
+    "bootstrap-social": "",
+    "flag-sprites": "",
+    "font-awesome": ""
+  },
+  "devDependencies": {
+    "browserify-shim": "",
+    "coffeeify": "",
+    "lessify": ""
+  },
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "browserify-shim",
+      "lessify"
+    ]
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "theme": "./lib/theme/src/index.less",
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js",
+    "angular": "./node_modules/angular/angular.js",
+    "angular-bootstrap": "./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-0.12.0.js",
+    "angular-bootstrap-tpls": "./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls-0.12.0.js"
+  },
+  "browserify-shim": {
+    "jquery": {
+      "exports": "$"
+    },
+    "angular": {
+      "exports": "angular",
+      "depends": "jquery"
+    }
+  },
+  "scripts": {
+    "build": "./scripts/build",
+    "bundle": "./scripts/bundle",
+    "clean": "./scripts/clean",
+    "copy": "./scripts/copy"
+  },
+  "author": "João Afonso Martins",
+  "license": "MIT",
+  "homepage": "https://github.com/joaoafrmartins/angular-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaoafrmartins/angular-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joaoafrmartins/angular-app/issues"
+  }
+}

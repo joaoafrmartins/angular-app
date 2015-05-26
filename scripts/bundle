@@ -1,0 +1,38 @@
+#!/bin/bash
+
+source ./scripts/vars
+
+./scripts/clean
+
+./scripts/copy
+
+# CSS
+
+lessc "$PWD/lib/theme/index.less" > "$CSS/theme.css"
+
+# I18N
+
+find -L "$PWD" -name "*-i18n-*.json" -type f -exec cp {} "$I18N" \;
+
+find "$PWD/lib" -name "*.cson" -exec sh -c 'cson2json "$1" > "./public_html/i18n/$(basename $1)"' _ {} \;
+
+find "$I18N" -name "*.cson" -exec rename 's/\.cson$/.json/' '{}' \;
+
+# TEMPLATES
+
+rsync -av --prune-empty-dirs "$PWD/lib/" "$TEMPLATES" \
+  --include \*/ --include \*.html --exclude \*
+
+cd ./node_modules/angular-notify/
+
+./scripts/build
+
+cd -
+
+cd ./node_modules/angular-navbar/
+
+./scripts/build
+
+cd -
+
+./scripts/build

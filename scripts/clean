@@ -1,0 +1,9 @@
+#!/bin/bash
+
+source ./scripts/vars
+
+rm -Rf "$PUBLIC_HTML"
+
+mkdir -p $I18N
+mkdir -p $TEMPLATES
+mkdir -p $CSS

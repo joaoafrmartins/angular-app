@@ -1,0 +1,13 @@
+<!doctype html>
+<html ng-app="app" ng-controller="MasterController">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ MasterPage.getTitle() | translate }}</title>
+    <link rel="stylesheet" type="text/css" href="./css/theme.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://angularjs.org/favicon.ico"/>
+  </head>
+  <body>
+    <script type="text/javascript" src="./bundle.js"></script>
+    <div ui-view></div>
+  </body>
+</html>

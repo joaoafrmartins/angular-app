@@ -1,0 +1,14 @@
+# APP
+
+LIB="$PWD/lib"
+PUBLIC_HTML="$PWD/public_html"
+I18N="$PUBLIC_HTML/i18n"
+TEMPLATES="$PUBLIC_HTML/templates"
+CSS="$PUBLIC_HTML/css"
+
+# DEPS
+
+DEPS="$PWD/node_modules"
+BOOTSTRAP="$DEPS/bootstrap"
+FONTAWESOME="$DEPS/font-awesome"
+FLAGS="$DEPS/flag-sprites"
