@@ -23,16 +23,13 @@ find "$I18N" -name "*.cson" -exec rename 's/\.cson$/.json/' '{}' \;
 rsync -av --prune-empty-dirs "$PWD/lib/" "$TEMPLATES" \
   --include \*/ --include \*.html --exclude \*
 
-cd ./node_modules/angular-notify/
 
-./scripts/build
+COMPONENTS=(angular-notify angular-navbar angular-language-picker)
 
-cd -
-
-cd ./node_modules/angular-navbar/
-
-./scripts/build
-
-cd -
-
-./scripts/build
+for COMPONENT in "${COMPONENTS[@]}"
+do
+  echo "build: $COMPONENT"
+	cd "./node_modules/$COMPONENT/"
+	./scripts/build
+  cd - > /dev/null
+done

@@ -23,18 +23,20 @@
     "bootstrap": "",
     "bootstrap-social": "",
     "flag-sprites": "",
-    "font-awesome": ""
+    "font-awesome": "",
+    "angular-navbar": "",
+    "angular-notify": "",
+    "angular-language-picker": "",
+    "less-utils": ""
   },
   "devDependencies": {
     "browserify-shim": "",
-    "coffeeify": "",
-    "lessify": ""
+    "coffeeify": ""
   },
   "browserify": {
     "transform": [
       "coffeeify",
-      "browserify-shim",
-      "lessify"
+      "browserify-shim"
     ]
   },
   "browser": {
