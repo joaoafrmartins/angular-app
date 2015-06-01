@@ -1,4 +1,18 @@
-module.exports = class MasterController
+angular = require 'angular'
+
+require 'angular-navbar'
+
+require 'angular-notify'
+
+require 'angular-language-picker'
+
+app = angular.module 'app.pages.master', [
+  'app.navbar',
+  'app.notify',
+  'app.languagePicker'
+]
+
+app.controller "MasterController", class MasterController
 
   constructor: (
     $scope,

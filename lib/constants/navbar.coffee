@@ -9,6 +9,10 @@ module.exports = {
     {
       title: "ABOUT"
       href: "#/about"
+    },
+    {
+      title: "CRUD_DEMO"
+      href: "#/crud-demo"
     }
   ]
 }

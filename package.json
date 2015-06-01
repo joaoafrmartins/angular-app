@@ -27,6 +27,7 @@
     "angular-navbar": "",
     "angular-notify": "",
     "angular-language-picker": "",
+    "angular-crud": "",
     "less-utils": ""
   },
   "devDependencies": {

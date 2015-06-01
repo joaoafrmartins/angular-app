@@ -24,7 +24,7 @@ rsync -av --prune-empty-dirs "$PWD/lib/" "$TEMPLATES" \
   --include \*/ --include \*.html --exclude \*
 
 
-COMPONENTS=(angular-notify angular-navbar angular-language-picker)
+COMPONENTS=(angular-notify angular-navbar angular-language-picker angular-crud)
 
 for COMPONENT in "${COMPONENTS[@]}"
 do
@@ -33,3 +33,5 @@ do
 	./scripts/build
   cd - > /dev/null
 done
+
+./scripts/build

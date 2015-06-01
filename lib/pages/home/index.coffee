@@ -1,6 +1,6 @@
 angular = require 'angular'
 
-app = angular.module 'app.pages'
+app = angular.module 'app.pages.home', ['pascalprecht.translate']
 
 app.controller "HomeController", class HomeController
 

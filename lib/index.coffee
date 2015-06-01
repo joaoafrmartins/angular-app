@@ -28,14 +28,6 @@ require 'angular-bootstrap'
 
 require 'angular-bootstrap-tpls'
 
-### COMPONENTS ###
-
-require 'angular-navbar'
-
-require 'angular-notify'
-
-require 'angular-language-picker'
-
 ### PAGES ###
 
 require './pages'
@@ -53,10 +45,7 @@ app = angular.module 'app', [
   'ui.router',
   'ui.router.tabs',
   'pascalprecht.translate',
-  'app.pages',
-  'app.navbar',
-  'app.notify',
-  'app.languagePicker'
+  'app.pages'
 ]
 
 require './factories'

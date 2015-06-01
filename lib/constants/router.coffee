@@ -35,3 +35,9 @@ module.exports =
     url: '/about'
 
     templateUrl: 'templates/pages/about/index.html'
+
+  'site.crudDemo':
+
+    url: '/crud-demo'
+
+    templateUrl: 'templates/pages/crud-demo/index.html'
